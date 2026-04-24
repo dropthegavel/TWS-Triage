@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<!-- saved from url=(0062)file:///C:/Users/Christopher.Rojas/Downloads/triage-index.html -->
+<!-- saved from url=(0055)file:///C:/Users/Christopher.Rojas/Downloads/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Triage — R2 Unified Technologies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="./index_files/css2" rel="stylesheet">
+<link href="file:///C:/Users/Christopher.Rojas/Downloads/index_files/css2" rel="stylesheet">
 <style>
 :root {
-  --bg: #0a0c0f;
-  --surface: #111418;
-  --surface2: #181c22;
-  --surface3: #1f242c;
-  --border: #252b35;
-  --border2: #2e3642;
-  --text: #e8edf5;
-  --text2: #8b95a6;
-  --text3: #4d5666;
-  --accent: #3b82f6;
-  --accent2: #1d4ed8;
+  --bg: #0a0c0f; --surface: #111418; --surface2: #181c22; --surface3: #1f242c;
+  --border: #252b35; --border2: #2e3642; --text: #e8edf5; --text2: #8b95a6; --text3: #4d5666;
+  --accent: #3b82f6; --accent2: #1d4ed8;
   --l1: #ef4444; --l1bg: #1a0808; --l1border: #7f1d1d;
   --l2: #f97316; --l2bg: #1a0e05; --l2border: #7c2d12;
   --l3: #eab308; --l3bg: #191400; --l3border: #713f12;
@@ -131,7 +123,6 @@ textarea::placeholder { color: var(--text3); font-style: italic; }
 </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <div class="logo">
@@ -144,16 +135,13 @@ textarea::placeholder { color: var(--text3); font-style: italic; }
     <div class="header-badge">IT Support AI · Internal</div>
   </div>
 </header>
-
 <main class="main">
-
   <div class="sla-grid">
     <div class="sla-chip l1"><div class="sla-level">Level 1</div><div class="sla-name">Urgent</div><div class="sla-time">1 hr response</div></div>
     <div class="sla-chip l2"><div class="sla-level">Level 2</div><div class="sla-name">High</div><div class="sla-time">2 hr response</div></div>
     <div class="sla-chip l3"><div class="sla-level">Level 3</div><div class="sla-name">Medium</div><div class="sla-time">4 hr response</div></div>
     <div class="sla-chip l4"><div class="sla-level">Level 4</div><div class="sla-name">Low</div><div class="sla-time">8 hr response</div></div>
   </div>
-
   <div style="margin-bottom:16px">
     <div class="section-label">Describe the issue</div>
     <div class="input-card">
@@ -186,27 +174,24 @@ textarea::placeholder { color: var(--text3); font-style: italic; }
       </div>
     </div>
   </div>
-
   <div style="margin-bottom:20px">
     <div class="section-label">Quick examples</div>
     <div class="examples-row">
       <button class="ex-chip" onclick="fillExample(&#39;Network is completely down across the entire office. Nobody can access the internet or internal systems. Started about 20 minutes ago. All floors affected.&#39;)">Network outage</button>
-      <button class="ex-chip" onclick="fillExample(&#39;John in sales says his laptop is extremely slow — takes 5+ minutes to open Excel. Started a few days ago. He can still work but it is very painful and getting worse.&#39;)">Slow laptop</button>
+      <button class="ex-chip" onclick="fillExample(&#39;John in sales says his laptop is extremely slow, takes 5 or more minutes to open Excel. Started a few days ago. He can still work but it is very painful.&#39;)">Slow laptop</button>
       <button class="ex-chip" onclick="fillExample(&#39;Maria cannot log into her email at all. Password reset is not working either. She has a client presentation in 2 hours and urgently needs access.&#39;)">Email lockout</button>
       <button class="ex-chip" onclick="fillExample(&#39;Please install Adobe Acrobat Pro on my workstation. I need it to review and sign contracts. No rush, whenever you get a chance.&#39;)">Software request</button>
-      <button class="ex-chip" onclick="fillExample(&#39;The shared printer on floor 2 is jammed and not printing for anyone. About 6 people in the accounting team are affected. Month-end reports need to go out today.&#39;)">Printer down</button>
-      <button class="ex-chip" onclick="fillExample(&#39;We think we have been hit by ransomware. Files on the file server have strange extensions and there is a ransom note on several desktops asking for payment. Several users cannot open their files.&#39;)">Ransomware</button>
-      <button class="ex-chip" onclick="fillExample(&#39;VPN keeps dropping every 30-45 minutes for remote users. Affects about 8 people working from home today. They can reconnect but it is very disruptive.&#39;)">VPN dropping</button>
+      <button class="ex-chip" onclick="fillExample(&#39;The shared printer on floor 2 is jammed and not printing for anyone. About 6 people in accounting are affected. Month-end reports need to go out today.&#39;)">Printer down</button>
+      <button class="ex-chip" onclick="fillExample(&#39;We think we have been hit by ransomware. Files on the file server have strange extensions and there is a ransom note on several desktops. Several users cannot open their files.&#39;)">Ransomware</button>
+      <button class="ex-chip" onclick="fillExample(&#39;VPN keeps dropping every 30 to 45 minutes for remote users. Affects about 8 people working from home today. They can reconnect but it is very disruptive.&#39;)">VPN dropping</button>
     </div>
   </div>
-
   <div class="analyze-row">
     <button class="btn-analyze" id="analyzeBtn" onclick="runTriage()">
       <span id="btnContent">Analyze &amp; Generate →</span>
     </button>
     <button class="btn-clear" onclick="clearAll()">Clear</button>
   </div>
-
   <div class="result-wrapper" id="resultWrapper">
     <div class="priority-banner" id="priorityBanner">
       <div class="banner-left">
@@ -258,46 +243,13 @@ textarea::placeholder { color: var(--text3); font-style: italic; }
       <strong>Next step in Halo PSA:</strong> Create a new ticket → paste the title and description above → set urgency to <strong id="haloUrgencyHint"></strong> → paste the engineer case notes into the internal notes field → assign or route as needed.
     </div>
   </div>
-
 </main>
-
 <script>
-// ── YOUR CLOUDFLARE WORKER URL (proxy to Groq) ─────────────────────────────
 const WORKER_URL = 'https://twstriage.dropthegavel.workers.dev/';
-// ──────────────────────────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `You are Triage AI — an IT support assistant for R2 Unified Technologies MSP on-site technicians.
-
-Analyze IT issue descriptions and return a single valid JSON object. No markdown, no preamble, no explanation outside the JSON.
-
-HALO PSA URGENCY LEVELS (exact names — use these only):
-- Level 1 | Urgent   | 1 hour  | Full outage, active security breach, entire site or critical system down. Nobody can work.
-- Level 2 | High     | 2 hours | One or more users fully blocked from their core job duties.
-- Level 3 | Medium   | 4 hours | Degraded function. User can still partially work. No immediate business stoppage.
-- Level 4 | Low      | 8 hours | Minor issue or general request. No productivity impact.
-
-ESCALATION RULES:
-Escalate to R2 = true when: Level 1 always | Level 2 not resolved in 30 min | Root cause needs Azure/firewall/server/AD/DNS/Exchange Online | Issue recurring 3+ times in 30 days | On-site tech is stuck.
-Escalate to R2 = false when: Level 3 or 4 | Solvable by reboot/reinstall/cable check/password reset/basic user training.
-
-Return this exact JSON structure:
-{
-  "level": 1,
-  "urgency": "Urgent",
-  "response_target": "1 hour",
-  "category": "Network",
-  "summary": "Short one-line issue summary under 12 words",
-  "escalate": true,
-  "escalation_reason": "Plain reason why escalating or empty string if not",
-  "reasoning": "2-3 sentences explaining the priority decision and business impact",
-  "first_steps": ["step one", "step two", "step three", "step four"],
-  "escalation_guidance": "2-3 sentences of specific guidance on what to do next",
-  "ticket_title": "Halo PSA ticket title — specific, action-oriented, under 15 words",
-  "ticket_description": "3-5 sentence ticket description written in neutral MSP voice. Include: who is affected, what the issue is, business impact, what has already been attempted if known.",
-  "case_notes": "ENGINEER CASE NOTES\n\nThe Issue:\n- What I'm seeing: [fill from description]\n- The setup: [OS/hardware/network info or Not specified]\n\nTroubleshooting Progress:\n- What I've verified: [what is confirmed from the report]\n- Specific actions taken: [steps tried or None yet]\n- Findings: [error messages, patterns or None reported]\n\nCurrent Status & Handover:\n- Where we left off: [current state]\n- What to try next: [concrete first recommended step]\n- Pending items: [waiting on anything or None at this time]\n\nResolution (For Closing):\n- The Root Cause: TBD — pending investigation\n- The Fix: TBD — pending investigation"
+function buildPrompt() {
+  return 'You are Triage AI for R2 Unified Technologies MSP. Analyze the IT issue and return ONLY a valid JSON object. No markdown. No code blocks. No newlines inside string values - use the literal text \\n instead. Use these exact urgency levels: Level 1 Urgent 1 hour (full outage or security breach), Level 2 High 2 hours (user fully blocked), Level 3 Medium 4 hours (degraded function), Level 4 Low 8 hours (minor or request). Escalate to R2 true when Level 1 always, Level 2 not resolved in 30 min, needs Azure firewall server AD DNS Exchange Online, recurring 3 plus times in 30 days, or tech is stuck. Escalate false when Level 3 or 4 or solvable by reboot reinstall cable check password reset. Return exactly this JSON with no extra text before or after: {"level":1,"urgency":"Urgent","response_target":"1 hour","category":"Network","summary":"Brief one line summary","escalate":true,"escalation_reason":"reason or empty string","reasoning":"2 sentences on priority and business impact","first_steps":["step 1","step 2","step 3","step 4"],"escalation_guidance":"2 sentences on what to do next","ticket_title":"Specific action oriented title under 15 words","ticket_description":"3 to 5 sentences in MSP voice covering who is affected what the issue is business impact and steps already tried","case_notes":"ENGINEER CASE NOTES\\nThe Issue:\\n- What I am seeing: describe the behavior\\n- The setup: OS hardware network or Not specified\\nTroubleshooting Progress:\\n- What I verified: what is known\\n- Specific actions taken: steps tried or None yet\\n- Findings: errors patterns or None reported\\nCurrent Status:\\n- Where we left off: current state\\n- What to try next: first recommended step\\n- Pending items: anything waiting or None\\nResolution:\\n- The Root Cause: TBD pending investigation\\n- The Fix: TBD pending investigation"}';
 }
-
-Write all fields in direct MSP engineer voice. No fluff.`;
 
 function fillExample(text) {
   document.getElementById('issueInput').value = text;
@@ -317,7 +269,7 @@ function copyBlock(id, btn) {
   const el = document.getElementById(id);
   if (!el) return;
   navigator.clipboard.writeText(el.textContent).then(() => {
-    btn.textContent = 'Copied ✓';
+    btn.textContent = 'Copied';
     btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
   });
@@ -330,31 +282,48 @@ async function runTriage() {
   const btn = document.getElementById('analyzeBtn');
   const btnContent = document.getElementById('btnContent');
   btn.disabled = true;
-  btnContent.innerHTML = '<span class="spinner"></span> Analyzing…';
+  btnContent.innerHTML = '<span class="spinner"></span> Analyzing';
 
   const reportedBy = document.getElementById('reportedBy').value.trim();
   const location = document.getElementById('location').value.trim();
   const category = document.getElementById('category').value;
 
-  let context = issue;
-  if (reportedBy) context += '\n\nReported by: ' + reportedBy;
-  if (location) context += '\nLocation: ' + location;
-  if (category !== 'Auto-detect') context += '\nCategory hint: ' + category;
+  let context = 'Issue: ' + issue;
+  if (reportedBy) context += ' Reported by: ' + reportedBy;
+  if (location) context += ' Location: ' + location;
+  if (category !== 'Auto-detect') context += ' Category: ' + category;
 
   try {
     const resp = await fetch(WORKER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: SYSTEM_PROMPT, message: context })
+      body: JSON.stringify({ prompt: buildPrompt(), message: context })
     });
 
-    if (!resp.ok) throw new Error('Worker responded with ' + resp.status);
+    if (!resp.ok) {
+      const errData = await resp.json().catch(() => ({}));
+      throw new Error(errData.error || 'Worker responded with ' + resp.status);
+    }
 
     const data = await resp.json();
     if (data.error) throw new Error(data.error);
 
-    const raw = typeof data.result === 'string' ? data.result : JSON.stringify(data.result);
-    const r = JSON.parse(raw.replace(/```json|```/g, '').trim());
+    let raw = data.result || '';
+    raw = raw.replace(/```json/g, '').replace(/```/g, '').trim();
+
+    const jsonStart = raw.indexOf('{');
+    const jsonEnd = raw.lastIndexOf('}');
+    if (jsonStart === -1 || jsonEnd === -1) throw new Error('No JSON found in response');
+    raw = raw.slice(jsonStart, jsonEnd + 1);
+
+    let r;
+    try {
+      r = JSON.parse(raw);
+    } catch(parseErr) {
+      raw = raw.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+      r = JSON.parse(raw);
+    }
+
     renderResult(r, reportedBy, location);
 
   } catch (e) {
@@ -362,7 +331,7 @@ async function runTriage() {
   }
 
   btn.disabled = false;
-  btnContent.textContent = 'Analyze & Generate →';
+  btnContent.textContent = 'Analyze & Generate';
 }
 
 function renderResult(r, reportedBy, location) {
@@ -373,7 +342,7 @@ function renderResult(r, reportedBy, location) {
   document.getElementById('priorityBanner').className = 'priority-banner ' + (bannerMap[r.level] || 'banner-l4');
   document.getElementById('priorityTag').className    = 'priority-tag '    + (tagMap[r.level]    || 'tag-l4');
   document.getElementById('priorityTagText').textContent = 'Level ' + r.level + ' — ' + r.urgency;
-  document.getElementById('bannerTitle').textContent = r.summary;
+  document.getElementById('bannerTitle').textContent  = r.summary || '';
 
   let meta = 'Response target: ' + r.response_target + '  ·  Category: ' + r.category;
   if (reportedBy) meta += '  ·  ' + reportedBy;
@@ -406,8 +375,11 @@ function renderResult(r, reportedBy, location) {
   document.getElementById('ticketTitle').textContent = r.ticket_title || '';
 
   const urgencyLine = '[Set urgency in Halo: Level ' + r.level + ' — ' + r.urgency + ' | Response target: ' + r.response_target + ']\n\n';
-  document.getElementById('ticketDesc').textContent = urgencyLine + (r.ticket_description || '');
-  document.getElementById('caseNotes').textContent  = r.case_notes || '';
+  document.getElementById('ticketDesc').textContent  = urgencyLine + (r.ticket_description || '');
+
+  const notes = (r.case_notes || '').replace(/\\n/g, '\n');
+  document.getElementById('caseNotes').textContent   = notes;
+
   document.getElementById('haloUrgencyHint').textContent = 'Level ' + r.level + ' — ' + r.urgency + ' (' + r.response_target + ')';
 
   document.getElementById('errorBox').style.display = 'none';
